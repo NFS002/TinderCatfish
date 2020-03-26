@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Tinder catfish",
+  "version": "0.1",
+  "description": "Commenting and leaving reviews on tinder profiles",
+  "icons": {
+    "128": "imgs/logo.png"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "browser_action": {
+        "default_icon": "imgs/logo.png"
+  },
+  "author": "Noah Florin-Sefton",
+  "content_scripts": [
+    {
+      "js": ["jquery.js","pagination.js","content.js"],
+      "css":["content.css","pagination.css"],
+      "matches": ["https://www.gotinder.com/*"]
+    }
+  ],
+  "version_name": "Initial",
+  "web_accessible_resources": [
+    "imgs/catfish-banner.png"
+  ]
+}
